@@ -1,0 +1,55 @@
+# ==============================================================================
+# Auto Categorization Webhook — Python Dependencies
+# ==============================================================================
+# All versions are pinned for reproducible production builds.
+# To update: pip install --upgrade <package> && pip freeze | grep <package>
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Web Framework
+# ------------------------------------------------------------------------------
+fastapi==0.115.6
+uvicorn[standard]==0.32.1          # ASGI server with uvloop + httptools extras
+
+# ------------------------------------------------------------------------------
+# OpenAI SDK
+# ------------------------------------------------------------------------------
+openai==1.58.1                     # Async client + structured output (parse())
+
+# ------------------------------------------------------------------------------
+# Configuration & Validation
+# ------------------------------------------------------------------------------
+pydantic==2.10.4                   # Data validation (v2 — required for schemas)
+pydantic-settings==2.7.0           # BaseSettings with .env file support
+
+# ------------------------------------------------------------------------------
+# Retry Logic
+# ------------------------------------------------------------------------------
+tenacity==9.0.0                    # Async exponential backoff for OpenAI calls
+
+# ------------------------------------------------------------------------------
+# HTTP Client (used by OpenAI SDK internally)
+# ------------------------------------------------------------------------------
+httpx==0.28.1                      # Async HTTP — also used by FastAPI test client
+
+# ------------------------------------------------------------------------------
+# Testing
+# ------------------------------------------------------------------------------
+pytest==8.3.4
+pytest-asyncio==0.24.0             # Async test support (asyncio_mode = auto)
+pytest-mock==3.14.0                # Mocker fixture for patching
+pytest-cov==6.0.0                  # Coverage reporting
+httpx==0.28.1                      # AsyncClient for FastAPI integration tests
+
+# ------------------------------------------------------------------------------
+# Development / Linting (not installed in production Docker image)
+# ------------------------------------------------------------------------------
+# ruff==0.8.6                      # Fast linter (optional — uncomment locally)
+# mypy==1.14.0                     # Static type checker (optional)
+
+# ------------------------------------------------------------------------------
+# Frontend / UI
+# ------------------------------------------------------------------------------
+streamlit>=1.41.1                  # Web dashboard UI
+pandas>=2.2.3                      # Required for UI history table
+requests>=2.32.3                   # UI backend calls

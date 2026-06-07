@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ex-001",
+    "title": "Unable to log into my account",
+    "description": "I have been trying to log in for the past hour. I enter my correct email and password but keep getting 'Invalid credentials' error. I have not changed my password recently and I am sure it is correct.",
+    "category": "Authentication",
+    "subcategory": "Login Failure",
+    "priority": "High",
+    "confidence": 0.97,
+    "reasoning": "The user explicitly cannot access their account due to a login error. This directly impacts account access, making it High priority. The category and subcategory are unambiguous."
+  },
+  {
+    "id": "ex-002",
+    "title": "Forgot password email never arrives",
+    "description": "I clicked Forgot Password and entered my email. It says the email was sent but I have checked my inbox and spam folder multiple times over the last 24 hours and nothing arrived. My email address is definitely correct.",
+    "category": "Authentication",
+    "subcategory": "Password Reset",
+    "priority": "Medium",
+    "confidence": 0.95,
+    "reasoning": "Password reset email not arriving is a known Authentication issue. The user can still contact support so severity is Medium rather than High or Critical."
+  },
+  {
+    "id": "ex-003",
+    "title": "Charged twice for the same invoice",
+    "description": "I was billed twice for my monthly subscription on June 1st. My bank statement shows two identical charges of $49.99 from your company on the same day. I need a refund for the duplicate charge immediately.",
+    "category": "Billing",
+    "subcategory": "Duplicate Charge",
+    "priority": "High",
+    "confidence": 0.98,
+    "reasoning": "A duplicate charge is a clear Billing issue. The financial impact and urgency of refund make this High priority. Confidence is very high due to unambiguous description."
+  },
+  {
+    "id": "ex-004",
+    "title": "Payment keeps failing at checkout",
+    "description": "Every time I try to complete my purchase, the payment fails at the final step. I have tried three different credit cards and two PayPal accounts. The error just says 'Payment could not be processed'. I need to complete this purchase today.",
+    "category": "Payments",
+    "subcategory": "Payment Processing Failure",
+    "priority": "High",
+    "confidence": 0.96,
+    "reasoning": "Multiple payment methods failing suggests a systemic Payments issue, not a card-specific problem. High priority because it is blocking a purchase in progress."
+  },
+  {
+    "id": "ex-005",
+    "title": "App crashes on startup on iPhone 15",
+    "description": "Since the last update (v4.2.1), the mobile app crashes immediately after the splash screen on my iPhone 15 running iOS 17.4. I have tried reinstalling the app twice. The crash happens 100% of the time.",
+    "category": "Bug Report",
+    "subcategory": "App Crash on Launch",
+    "priority": "Critical",
+    "confidence": 0.97,
+    "reasoning": "A 100% crash rate on a specific device/OS combination introduced by an update is a Critical Bug Report. Affects all users on that configuration and the app is completely unusable."
+  },
+  {
+    "id": "ex-006",
+    "title": "Dashboard takes 30+ seconds to load",
+    "description": "The main dashboard is extremely slow to load. It used to load in under 2 seconds, but for the past week it takes between 30 and 60 seconds. This is affecting my ability to do my work. All other pages load normally.",
+    "category": "Performance",
+    "subcategory": "Slow Page Load",
+    "priority": "High",
+    "confidence": 0.93,
+    "reasoning": "Severe and consistent slowdown of a core page is a Performance issue. Regression from 2s to 30-60s represents a significant degradation impacting productivity, warranting High priority."
+  },
+  {
+    "id": "ex-007",
+    "title": "Request to add dark mode",
+    "description": "I would love to see a dark mode option added to the web app. Working late at night, the bright white interface is hard on my eyes. Many other tools I use have this feature and it makes a huge difference. Would be great to have it as a toggle in settings.",
+    "category": "Feature Request",
+    "subcategory": "Dark Mode",
+    "priority": "Low",
+    "confidence": 0.99,
+    "reasoning": "This is a clear Feature Request for a UI enhancement. No existing functionality is broken. Low priority as it is a preference-based improvement with no operational impact."
+  },
+  {
+    "id": "ex-008",
+    "title": "Cannot update billing address",
+    "description": "I need to update my billing address in my account settings. When I go to Billing > Address and click Save after making changes, I get a spinning loader for a few seconds and then the page just shows my old address again. No error is shown.",
+    "category": "Account Management",
+    "subcategory": "Profile Update Failure",
+    "priority": "Medium",
+    "confidence": 0.91,
+    "reasoning": "The user cannot update their account profile, which falls under Account Management. It could also be a Bug Report, but the primary intent is account data management. Medium priority as it is not blocking core functionality but is preventing an important admin task."
+  },
+  {
+    "id": "ex-009",
+    "title": "Suspicious login from unknown location",
+    "description": "I received an email notification that someone logged into my account from an IP address in a country I have never visited (Russia). I did not authorise this login. I have already changed my password but I am concerned my account data may have been compromised.",
+    "category": "Security",
+    "subcategory": "Unauthorized Account Access",
+    "priority": "Critical",
+    "confidence": 0.99,
+    "reasoning": "Unauthorized access to a user account is a Critical Security incident. Immediate investigation and account audit are required. Confidence is near-certain due to the explicit security breach language."
+  },
+  {
+    "id": "ex-010",
+    "title": "Invoice PDF download not working",
+    "description": "When I click Download Invoice on any of my past invoices, nothing happens. The button appears to do nothing. I have tried Chrome, Firefox, and Edge browsers. I need these invoices for my tax records urgently.",
+    "category": "Billing",
+    "subcategory": "Invoice Download Error",
+    "priority": "Medium",
+    "confidence": 0.94,
+    "reasoning": "This is a Billing issue related to invoice document retrieval. The urgency flag for tax records elevates this above Low, but it does not affect payment processing or account access, so Medium is appropriate."
+  },
+  {
+    "id": "ex-011",
+    "title": "How do I export my data?",
+    "description": "I would like to export all my data including reports, settings, and account history. Is there a way to do this from within the app? I could not find an export option anywhere in the settings menu.",
+    "category": "Account Management",
+    "subcategory": "Data Export",
+    "priority": "Low",
+    "confidence": 0.88,
+    "reasoning": "This is an account management inquiry about data export. The user is asking how to do something rather than reporting a failure, which suggests Low priority. Slight confidence reduction because it could also be a Feature Request if export does not exist."
+  },
+  {
+    "id": "ex-012",
+    "title": "API rate limit errors in production",
+    "description": "We are getting HTTP 429 errors from your API in our production environment. Our integration was working fine last week. We are sending approximately 500 requests per minute which is within our agreed plan limit of 1000 rpm. This is causing failures for our end users.",
+    "category": "Technical Support",
+    "subcategory": "API Rate Limiting",
+    "priority": "Critical",
+    "confidence": 0.96,
+    "reasoning": "Production API failures affecting end users is Critical. The issue is within the contracted limits, suggesting a platform problem. Technical Support is the correct category for API integration issues."
+  },
+  {
+    "id": "ex-013",
+    "title": "Two-factor authentication codes not working",
+    "description": "My 2FA codes from Google Authenticator are being rejected. I have checked that my phone's time is synced correctly. The codes are valid according to the app but your system keeps saying the code is invalid or expired. I cannot get into my account.",
+    "category": "Authentication",
+    "subcategory": "Two-Factor Authentication Failure",
+    "priority": "High",
+    "confidence": 0.96,
+    "reasoning": "2FA failure preventing login is an Authentication issue. High priority as the user is completely locked out of their account despite following correct procedures."
+  },
+  {
+    "id": "ex-014",
+    "title": "Wrong currency displayed on checkout",
+    "description": "I am located in the UK but the checkout page is showing prices in USD instead of GBP. I have set my account region to United Kingdom and the currency preference to GBP in settings, but checkout always reverts to USD. This is confusing and I cannot confirm the actual price I will be charged.",
+    "category": "Payments",
+    "subcategory": "Currency Display Error",
+    "priority": "Medium",
+    "confidence": 0.89,
+    "reasoning": "Incorrect currency display at checkout is a Payments display issue. Medium priority as it creates confusion and potential mistrust but does not prevent payment processing entirely. Slight ambiguity with Bug Report category reduces confidence slightly."
+  },
+  {
+    "id": "ex-015",
+    "title": "Need bulk user import feature for enterprise",
+    "description": "We are an enterprise customer with 500 users to onboard. Currently we have to add each user manually one at a time. This is taking our admin team days. We urgently need a CSV bulk import feature. Other enterprise tools we use have this standard feature.",
+    "category": "Feature Request",
+    "subcategory": "Bulk User Import",
+    "priority": "Medium",
+    "confidence": 0.92,
+    "reasoning": "This is a Feature Request for enterprise bulk operations. Medium priority (not Low) because the business impact for this enterprise customer is significant and there is no existing workaround beyond manual entry."
+  },
+  {
+    "id": "ex-016",
+    "title": "Memory usage keeps climbing until server crashes",
+    "description": "Our self-hosted instance shows steadily increasing memory usage over 24-48 hours until the server runs out of memory and crashes. After restart it is fine for a day then the cycle repeats. We are on version 3.1.2. This seems to be a memory leak introduced in recent versions.",
+    "category": "Bug Report",
+    "subcategory": "Memory Leak",
+    "priority": "Critical",
+    "confidence": 0.97,
+    "reasoning": "A repeatable memory leak causing production server crashes is a Critical Bug Report. The cyclical, predictable crash pattern strongly indicates a defect. Business operations are severely impacted."
+  },
+  {
+    "id": "ex-017",
+    "title": "Team member cannot access shared project",
+    "description": "I invited a colleague to collaborate on our project last week and they accepted the invitation. However, when they try to open the project, they get a 403 Forbidden error. I have confirmed their role is set to Editor in the team settings. The issue persists after re-inviting them.",
+    "category": "Account Management",
+    "subcategory": "Permissions and Access Control",
+    "priority": "High",
+    "confidence": 0.93,
+    "reasoning": "A team member blocked from accessing a shared project is an Account Management permissions issue. High priority as it directly impacts team collaboration and productivity."
+  },
+  {
+    "id": "ex-018",
+    "title": "API documentation is outdated",
+    "description": "The REST API documentation for the v2 endpoints still shows the old request format. The actual API now requires a different field structure but the docs have not been updated. This caused our integration to break until we figured out the correct format by trial and error.",
+    "category": "Technical Support",
+    "subcategory": "Documentation Error",
+    "priority": "Medium",
+    "confidence": 0.85,
+    "reasoning": "Outdated API documentation is a Technical Support issue. Medium priority as it can cause developer confusion and integration failures. Confidence is slightly lower as this could be classified under Bug Report or Feature Request."
+  },
+  {
+    "id": "ex-019",
+    "title": "Possible SQL injection vulnerability found",
+    "description": "While testing your API, I discovered what appears to be an SQL injection vulnerability in the /api/v2/search endpoint. By passing a crafted string in the q parameter, I was able to see database error messages that expose your table structure. I am reporting this responsibly and have not exploited it further.",
+    "category": "Security",
+    "subcategory": "Vulnerability Disclosure",
+    "priority": "Critical",
+    "confidence": 0.99,
+    "reasoning": "A reported SQL injection vulnerability is a Critical Security issue requiring immediate attention. The responsible disclosure context does not reduce the severity. Highest possible priority."
+  },
+  {
+    "id": "ex-020",
+    "title": "Can I get a refund for unused subscription months?",
+    "description": "I subscribed to the annual plan in January but I need to cancel now in March due to budget cuts. I have only used 2 months out of 12. Is it possible to get a partial refund for the remaining 10 months? I could not find any clear information about your refund policy.",
+    "category": "Billing",
+    "subcategory": "Refund Request",
+    "priority": "Medium",
+    "confidence": 0.93,
+    "reasoning": "A refund inquiry for unused subscription time is a Billing matter. Medium priority as it involves money but the user's access is not impaired and the request is administrative in nature."
+  }
+]
